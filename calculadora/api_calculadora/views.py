@@ -30,6 +30,6 @@ class DivisionView(APIView):
     def get(self,request , *args,  **kwargs):
         num_uno=request.GET.get('num_uno')
         num_dos=request.GET.get('num_dos')
-        division=int(num_uno)+int(num_dos)
+        division=int(num_uno)/int(num_dos)
         return Response(division, status=status.HTTP_200_OK)
     
